@@ -1,0 +1,3 @@
+example.property: "example property this is config-local"
+test.profile: "Test Test local profile"
+test.comment: "check check local profile"
