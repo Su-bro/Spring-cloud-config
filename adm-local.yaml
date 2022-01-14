@@ -35,6 +35,6 @@ database:
         username: jn-shortcut
         password: stage2018$
         url: jdbc:mysql://localhost:33065/jn_vertical_stage?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
-  test:
-    comment: '"check check3"'
-    profile: '"Test Test3"'
+test:
+  comment: '"check check3"'
+  profile: '"Test Test3"'
