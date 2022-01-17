@@ -1,7 +1,7 @@
 database:
   master:
     datasource:
-      url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+      url: jdbc:mariadb://localhost:330622/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
       username: jnapp
       password: stage2018$
   slave:
