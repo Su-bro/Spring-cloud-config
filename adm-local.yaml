@@ -26,7 +26,7 @@ database:
   master:
     datasource:
       url: jdbc:log4jdbc:mysql://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
-      password: stage2018$
+      password: stage2018$$
       driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
       username: jnapp
     aurora:
