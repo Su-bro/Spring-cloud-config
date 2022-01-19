@@ -1,4 +1,6 @@
 datasource:
+  profile:
+    local
   hikari:
     data-source-properties:
       cachePrepStmt: true
