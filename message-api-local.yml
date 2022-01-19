@@ -1,26 +1,47 @@
-database:
-  master:
-    datasource:
-      url: jdbc:mariadb://localhost:330622/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
-      username: jnapp
-      password: stage2018$
-  slave:
-    datasource:
+datasource:
+  hikari:
+    data-source-properties:
+      cachePrepStmt: true
+      prepStmtCacheSize: 250
+      prepStmtCacheSqlLimit: 2048
+      useServerPrepStmts: true
+      useLocalSessionState: true
+      rewriteBatchedStatements: true
+      cacheResultSetMetadata: true
+      cacheServerConfiguration: true
+      elideSetAutoCommits: true
+      maintainTimeStats: false
+  message:
+    master:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://localhost:33063/jn_message?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+      username: jn_message_app
+      password: wndrhskfk12#
+    slave:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://localhost:33063/jn_message?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+      username: jn_message_app
+      password: wndrhskfk12#
+  main:
+    master:
+      driver-class-name: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
       username: jnapp
       password: stage2018$
-  dormant-master:
-    datasource:
+    slave:
+      driver-class-name: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
       username: jnapp
       password: stage2018$
-  dormant-slave:
-    datasource:
+  dormant:
+    slave:
+      driver-class-name: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
       username: jnapp
       password: stage2018$
-  withdrawal-slave:
-    datasource:
-      url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
-      username: jnapp
-      password: stage2018$
+      
+  email:
+    queue-name: jn-message-api-sendMailBounce-stg-sqs
+    pulling-count: 300
+    pulling-timeout: 1000
+    second-max-rate: 14
