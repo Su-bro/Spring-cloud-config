@@ -1,6 +1,6 @@
 datasource:
   profile:
-    local
+    localzz
   hikari:
     data-source-properties:
       cachePrepStmt: true
