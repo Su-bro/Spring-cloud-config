@@ -1,0 +1,47 @@
+datasource:
+  dormant:
+    slave:
+      url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+      username: jnapp
+      password: stage2018$
+      driver-class-name: org.mariadb.jdbc.Driver
+  hikari:
+    data-source-properties:
+      elideSetAutoCommits: 'true'
+      rewriteBatchedStatements: 'true'
+      useServerPrepStmts: 'true'
+      prepStmtCacheSize: '250'
+      useLocalSessionState: 'true'
+      maintainTimeStats: 'false'
+      prepStmtCacheSqlLimit: '2048'
+      cachePrepStmt: 'true'
+      cacheServerConfiguration: 'true'
+      cacheResultSetMetadata: 'true'
+  main:
+    slave:
+      password: stage2018$
+      username: jnapp
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+    master:
+      url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+      username: jnapp
+      driver-class-name: org.mariadb.jdbc.Driver
+    password: stage2018$
+  message:
+    master:
+      url: jdbc:mariadb://localhost:33063/jn_message?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+      password: wndrhskfk12#
+      driver-class-name: org.mariadb.jdbc.Driver
+      username: jn_message_app
+    slave:
+      username: jn_message_app
+      driver-class-name: org.mariadb.jdbc.Driver
+      password: wndrhskfk12#
+      url: jdbc:mariadb://localhost:33063/jn_message?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+  email:
+    second-max-rate: '14'
+    queue-name: jn-message-api-sendMailBounce-stg-sqs
+    pulling-timeout: '1000'
+    pulling-count: '300'
+  profile: localzz
