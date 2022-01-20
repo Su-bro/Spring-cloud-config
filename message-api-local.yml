@@ -82,7 +82,7 @@ mongodb:
     password: jnapp2018$
     authentication-database: admin
     
-# aws:
-#   sqs:
-#     push-url: https://sqs.ap-northeast-2.amazonaws.com/869906240625/push_sqs
-#     push-chat-url: https://sqs.ap-northeast-2.amazonaws.com/869906240625/push_chat_sqs    
+aws:
+  sqs:
+    push-url: https://sqs.ap-northeast-2.amazonaws.com/869906240625/push_sqs
+    push-chat-url: https://sqs.ap-northeast-2.amazonaws.com/869906240625/push_chat_sqs    
