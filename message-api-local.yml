@@ -43,7 +43,7 @@ datasource:
       password: stage2018$
       
   email:
-    queue-name: jjn-message-api-sendMailBounce-stg-sqs
-    pulling-count: 300
+    queue-name: jn-message-api-sendMailBounce-stg-sqs
+    pulling-count: rr300
     pulling-timeout: 1000
     second-max-rate: 14
