@@ -44,6 +44,6 @@ datasource:
       
   email:
     queue-name: jn-message-api-sendMailBounce-stg-sqs
-    pulling-count: 300
+    pulling-count: rr300
     pulling-timeout: 1000
     second-max-rate: 14
