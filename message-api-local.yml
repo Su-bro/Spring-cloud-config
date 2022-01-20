@@ -32,7 +32,7 @@ datasource:
       password: stage2018$
     slave:
       driver-class-name: org.mariadb.jdbc.Driver
-      url: qqqjdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
+      url: jdbc:mariadb://localhost:33061/jnapp_main?useSSL=false&useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&autoReconnect=true
       username: jnapp
       password: stage2018$
   dormant:
