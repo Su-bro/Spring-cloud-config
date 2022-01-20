@@ -47,3 +47,37 @@ datasource:
     pulling-count: 300
     pulling-timeout: 1000
     second-max-rate: 14
+
+mongodb:
+  ## MongoDB AWS local message Config ##
+  message:
+    host: 127.0.0.1
+    database: jn_message
+    username: jn_message
+    port: 27017
+    password: jnapp2018$
+    authentication-database: admin
+  ## MongoDB AWS local message read-only Config ##
+  message-read-only:
+    host: 127.0.0.1
+    database: jn_message
+    username: jn_message
+    port: 27017
+    password: jnapp2018$
+    authentication-database: admin
+  ## MongoDB AWS local alarm cluster Config ##
+  alarm-cluster:
+    host: 127.0.0.1
+    database: jn_alarm
+    username: jn_alarm
+    port: 27018
+    password: jnapp2018$
+    authentication-database: admin
+  ## MongoDB AWS local alarm read-only Config ##
+  alarm-read-only:
+    host: 127.0.0.1
+    database: jn_alarm
+    username: jn_alarm
+    port: 27019
+    password: jnapp2018$
+    authentication-database: admin
